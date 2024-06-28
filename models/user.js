@@ -10,7 +10,8 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     studyTimes: {
         date: { type: String },
-        seconds: { type: Number }
+        seconds: { type: Number },
+        category: {type: String},
     }
 });
 

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models/user');
 
 router.put('/', async (req, res) => {
-    const { date, seconds, username } = req.body;
+    const { date, seconds, category, username } = req.body;
 
     try {
         // Find user in the database based on email
@@ -16,7 +16,8 @@ router.put('/', async (req, res) => {
         // Update or create the studyTimes object
         user.studyTimes = {
             date,
-            seconds
+            seconds,
+            category
         };
 
         // Save updated user object
