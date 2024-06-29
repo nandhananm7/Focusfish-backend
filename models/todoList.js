@@ -12,6 +12,10 @@ const todoSchema = new mongoose.Schema({
     deadline: {
         type: Date,
     },
+    flagged:{
+        type: Boolean,
+        default: false,
+    }
 });
 
 

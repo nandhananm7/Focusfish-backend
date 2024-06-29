@@ -10,6 +10,7 @@ const getTodoListRoutes = require("./routes/getTodoList");
 const addTodoListRoutes = require("./routes/addTodoList");
 const updateTodoListRoutes = require("./routes/updateTodoList");
 const deleteTodoListRoutes = require("./routes/deleteTodoList");
+const toggleFlaggedTodo = require("./routes/toggleFlaggedTodo");
 //const todoRoutes = require("./routes/todoserver");
 
 //db connection
@@ -25,7 +26,7 @@ app.use("/api/getTodoList", getTodoListRoutes);
 app.use("/api/addTodoList", addTodoListRoutes);
 app.use("/api/updateTodoList", updateTodoListRoutes);
 app.use("/api/deleteTodoList", deleteTodoListRoutes);
-//app.use("/api/todoserver", todoRoutes);
+app.use("/api/toggleFlaggedTodo", toggleFlaggedTodo);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`))
